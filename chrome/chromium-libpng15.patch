@@ -1,0 +1,16 @@
+Index: chromium-13.0.754.0/third_party/WebKit/Source/WebCore/platform/image-encoders/skia/PNGImageEncoder.cpp
+===================================================================
+--- 
+chromium-13.0.754.0/third_party/WebKit/Source/WebCore/platform/image-encoders/skia/PNGImageEncoder.cpp	(revision 87627)
++++ 
+chromium-13.0.754.0/third_party/WebKit/Source/WebCore/platform/image-encoders/skia/PNGImageEncoder.cpp	
+(working copy)
+@@ -44,7 +44,7 @@ namespace WebCore {
+ 
+ static void writeOutput(png_structp png, png_bytep data, png_size_t size)
+ {
+-    static_cast<Vector<unsigned char>*>(png->io_ptr)->append(data, size);
++    static_cast<Vector<unsigned char>*>(png_get_io_ptr(png))->append(data, size);
+ }
+ 
+ static void preMultipliedBGRAtoRGBA(const void* pixels, int pixelCount, unsigned char* output)
