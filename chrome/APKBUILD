@@ -1,9 +1,8 @@
 # Contributor: William Pitcock <nenolod@dereferenced.org>
-# Maintainer: Unmaintained <unmaintained@alpinelinux.org>
+# Maintainer: Laurelai Bailey <laurelai@oneechan.org>
 pkgname=chromium
 pkgver=13.0.754.0
 pkgrel=0
-pkgdir=/home/Laurelai/Desktop/chromium
 pkgdesc="chromium web browser"
 url="http://www.chromium.org/"
 arch=""
